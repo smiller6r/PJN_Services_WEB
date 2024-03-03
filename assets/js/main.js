@@ -285,6 +285,151 @@
     });
   });
 
+
+
+
+    $(document).ready(function () {
+        $('#myForm').submit(function (e) {
+            e.preventDefault(); // Zabrání výchozímu chování formuláøe (tj. pøesmìrování)
+
+            // Zobrazí zprávu "Loading" pøi odesílání formuláøe
+            $('.loading').show();
+
+            $.ajax({
+                type: 'POST',
+                url: 'email.php', // Adresa, kam se budou posílat data
+                data: new FormData(this), // Použití FormData pro získání dat formuláøe vèetnì souborù
+                contentType: false,
+                processData: false,
+                success: function (response) {
+                    // Skryje zprávu "Loading" po úspìšném odeslání formuláøe
+                    $('.loading').hide();
+
+                    // Zobrazí zprávu o úspìšném odeslání
+                    $('.sent-message').show();
+
+                    // Skryje pøípadnou pøedchozí chybovou zprávu
+                    $('.error-message').hide();
+
+                    $('#myForm')[0].reset(); // Vymažeme formuláø po odeslání
+                },
+                error: function (xhr, status, error) {
+                    // Skryje zprávu "Loading" po chybì pøi odesílání formuláøe
+                    $('.loading').hide();
+
+                    // Zobrazí chybovou zprávu
+                    $('.error-message').text('Error: ' + error).show();
+
+                    // Skryje pøípadnou pøedchozí úspìšnou zprávu
+                    $('.sent-message').hide();
+                }
+            });
+        });
+    });
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Funkce pro nastavení cookie
+        function setLanguageCookie(language) {
+            document.cookie = "selectedLanguage=" + language + ";path=/";
+        }
+
+        // Funkce pro získání hodnoty cookie
+        function getLanguageCookie() {
+            var name = "selectedLanguage=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var cookieArray = decodedCookie.split(';');
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookie = cookieArray[i];
+                while (cookie.charAt(0) === ' ') {
+                    cookie = cookie.substring(1);
+                }
+                if (cookie.indexOf(name) === 0) {
+                    return cookie.substring(name.length, cookie.length);
+                }
+            }
+            return null;
+        }
+
+        // Funkce pro zmìnu jazyka
+        function changeLanguage(language) {
+            // Skryje všechny elementy s tøídou language-*
+            var allElements = document.querySelectorAll('[class*="language-"]');
+            allElements.forEach(function (element) {
+                element.style.display = 'none';
+            });
+
+            // Zobrazí elementy s pøíslušnou tøídou pro vybraný jazyk
+            var selectedElements = document.querySelectorAll('.language-' + language);
+            selectedElements.forEach(function (element) {
+                element.style.display = 'inline';
+            });
+
+            // Aktualizuje obrázek vybraného jazyka
+            var selectedImage = document.querySelector(".selected-language");
+            var newImageSrc = document.querySelector('.dropdown ul li a[hreflang="' + language + '"] img').getAttribute("src");
+            selectedImage.setAttribute("src", newImageSrc);
+
+            // Uloží vybraný jazyk do souboru cookie
+            setLanguageCookie(language);
+        }
+
+        // Funkce pro nastavení jazyka podle nastavení prohlížeèe
+        function setLanguageFromBrowser() {
+            var browserLanguage = navigator.language || navigator.userLanguage;
+
+            if (browserLanguage.startsWith("cs")) {
+                changeLanguage("cs");
+            } else if (browserLanguage.startsWith("de")) {
+                changeLanguage("de");
+            } else {
+                changeLanguage("en");
+            }
+        }
+
+        // Naète uložený jazyk z cookies a zobrazí ho
+        var savedLanguage = getLanguageCookie();
+        if (savedLanguage) {
+            // Zmìní jazyk na uložený jazyk
+            changeLanguage(savedLanguage);
+        } else {
+            // Nastaví jazyk podle nastavení prohlížeèe, pokud není uložen žádný jazyk
+            setLanguageFromBrowser();
+        }
+
+        // Získání všech odkazù pro zmìnu jazyka
+        var languageLinks = document.querySelectorAll(".dropdown ul li a");
+
+        // Pøidání posluchaèe událostí kliknutí na odkazy pro zmìnu jazyka
+        languageLinks.forEach(function (link) {
+            link.addEventListener("click", function (event) {
+                event.preventDefault(); // Zabraòuje výchozímu chování odkazu
+
+                // Získání jazyka z atributu hreflang odkazu
+                var selectedLanguage = link.getAttribute("hreflang");
+
+                // Zmìna jazyka
+                changeLanguage(selectedLanguage);
+            });
+        });
+
+        // Pøidání posluchaèù událostí kliknutí na odkazy pro zmìnu jazyka u odkazù
+        document.getElementById('heading-cs').addEventListener('click', function () {
+            changeLanguage('cs');
+        });
+        document.getElementById('heading-en').addEventListener('click', function () {
+            changeLanguage('en');
+        });
+        document.getElementById('heading-de').addEventListener('click', function () {
+            changeLanguage('de');
+        });
+    });
+
+
+
+
+
   /**
    * Initiate Pure Counter 
    */

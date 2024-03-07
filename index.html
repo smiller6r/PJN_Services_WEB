@@ -49,792 +49,566 @@
 
 <body>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top ">
-        <div class="container d-flex align-items-center justify-content-lg-between">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+      <div class="container d-flex align-items-center justify-content-lg-between">
 
-            <h1 class="logo me-auto me-lg-0"><a href="index.html"><img src="assets/img/LOGO_PJN.png" alt="" class="img-fluid"></a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+          <h1 class="logo me-auto me-lg-0"><a href="index.html"><img src="assets/img/LOGO_PJN.png" alt="" class="img-fluid"></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-            <nav id="navbar" class="navbar order-last order-lg-0">
-                <ul>
-                    <li><a id="heading-cs" class="nav-link scrollto active language-cs" href="#hero">Domů</a></li>
-                    <li><a id="heading-en" class="nav-link scrollto active language-en" href="#hero">Home</a></li>
-                    <li><a id="heading-de" class="nav-link scrollto active language-de" href="#hero">Startseite</a></li>
-                    <li><a id="about-cs" class="nav-link scrollto language-cs" href="#about">O nás</a></li>
-                    <li><a id="about-en" class="nav-link scrollto language-en" href="#about" style="display: none;">About us</a></li>
-                    <li><a id="about-de" class="nav-link scrollto language-de" href="#about" style="display: none;">Über uns</a></li>
-                    <li><a id="services-cs" class="nav-link scrollto language-cs" href="#services">Výrobní možnosti</a></li>
-                    <li><a id="services-en" class="nav-link scrollto language-en" href="#services" style="display: none;">Manufacturing options</a></li>
-                    <li><a id="services-de" class="nav-link scrollto language-de" href="#services" style="display: none;">Fertigungsoptionen</a></li>
-                    <li><a id="portfolio-cs" class="nav-link scrollto language-cs" href="#portfolio">Reference</a></li>
-                    <li><a id="portfolio-en" class="nav-link scrollto language-en" href="#portfolio" style="display: none;">References</a></li>
-                    <li><a id="portfolio-de" class="nav-link scrollto language-de" href="#portfolio" style="display: none;">Referenzen</a></li>
-                    <li><a id="contact-cs" class="nav-link scrollto language-cs" href="#contact">Kontakt</a></li>
-                    <li><a id="contact-en" class="nav-link scrollto language-en" href="#contact" style="display: none;">Contact</a></li>
-                    <li><a id="contact-de" class="nav-link scrollto language-de" href="#contact" style="display: none;">Kontakt</a></li>
-                    <li class="dropdown">
-                        <a href="#">
-                            <img src="assets\img\Flags\Czech-Republic.png" class="selected-language img-fluid" alt="Czech Republic">
-                            <i class="bi bi-chevron-down"></i>
-                        </a>
-                        <ul>
-                            <li><a href="#" onclick="changeLanguage('cs')" hreflang="cs"><img src="assets\img\Flags\Czech-Republic.png" class="img-fluid" alt="Czech Republic"></a></li>
-                            <li><a href="#" onclick="changeLanguage('en')" hreflang="en"><img src="assets\img\Flags\United-States.png" class="img-fluid" alt="United States"></a></li>
-                            <li><a href="#" onclick="changeLanguage('de')" hreflang="de"><img src="assets\img\Flags\Germany.png" class="img-fluid" alt="Germany"></a></li>
-                        </ul>
-                    </li>
+          <nav id="navbar" class="navbar order-last order-lg-0">
+              <ul>
+                  <li><a id="heading-cs" class="nav-link scrollto active language-cs" href="#hero">Domů</a></li>
+                  <li><a id="heading-en" class="nav-link scrollto active language-en" href="#hero">Home</a></li>
+                  <li><a id="heading-de" class="nav-link scrollto active language-de" href="#hero">Startseite</a></li>
+                  <li><a id="about-cs" class="nav-link scrollto language-cs" href="#about">O nás</a></li>
+                  <li><a id="about-en" class="nav-link scrollto language-en" href="#about" style="display: none;">About us</a></li>
+                  <li><a id="about-de" class="nav-link scrollto language-de" href="#about" style="display: none;">Über uns</a></li>
+                  <li><a id="services-cs" class="nav-link scrollto language-cs" href="#services">Výrobní možnosti</a></li>
+                  <li><a id="services-en" class="nav-link scrollto language-en" href="#services" style="display: none;">Manufacturing options</a></li>
+                  <li><a id="services-de" class="nav-link scrollto language-de" href="#services" style="display: none;">Fertigungsoptionen</a></li>
+                  <li><a id="portfolio-cs" class="nav-link scrollto language-cs" href="#portfolio">Reference</a></li>
+                  <li><a id="portfolio-en" class="nav-link scrollto language-en" href="#portfolio" style="display: none;">References</a></li>
+                  <li><a id="portfolio-de" class="nav-link scrollto language-de" href="#portfolio" style="display: none;">Referenzen</a></li>
+                  <li><a id="contact-cs" class="nav-link scrollto language-cs" href="#contact">Kontakt</a></li>
+                  <li><a id="contact-en" class="nav-link scrollto language-en" href="#contact" style="display: none;">Contact</a></li>
+                  <li><a id="contact-de" class="nav-link scrollto language-de" href="#contact" style="display: none;">Kontakt</a></li>
+                  <li class="dropdown">
+                      <a href="#">
+                          <img src="assets\img\Flags\Czech-Republic.png" class="selected-language img-fluid" alt="Czech Republic">
+                          <i class="bi bi-chevron-down"></i>
+                      </a>
+                      <ul>
+                          <li><a href="#" onclick="changeLanguage('cs')" hreflang="cs"><img src="assets\img\Flags\Czech-Republic.png" class="img-fluid" alt="Czech Republic"></a></li>
+                          <li><a href="#" onclick="changeLanguage('en')" hreflang="en"><img src="assets\img\Flags\United-States.png" class="img-fluid" alt="United States"></a></li>
+                          <li><a href="#" onclick="changeLanguage('de')" hreflang="de"><img src="assets\img\Flags\Germany.png" class="img-fluid" alt="Germany"></a></li>
+                      </ul>
+                  </li>
 
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav><!-- .navbar -->
+              </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
 
-            <a href="#about" id="heading-cs" class="get-started-btn scrollto language-cs">Začínáme</a>
-            <a href="#about" id="heading-en" class="get-started-btn scrollto language-en" style="display: none;">Get Started</a>
-            <a href="#about" id="heading-de" class="get-started-btn scrollto language-de" style="display: none;">Loslegen</a>
+          <a href="#about" id="heading-cs" class="get-started-btn scrollto language-cs">Začínáme</a>
+          <a href="#about" id="heading-en" class="get-started-btn scrollto language-en" style="display: none;">Get Started</a>
+          <a href="#about" id="heading-de" class="get-started-btn scrollto language-de" style="display: none;">Loslegen</a>
 
+      </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-12 col-lg-8">
+            <h1 id="heading-cs" class="language-cs">Propojujeme Vaše potřeby s technologickými možnostmi<span>.</span><br /></h1>
+            <h1 id="heading-en" class="language-en" style="display: none;">We connect your needs with technological possibilities<span>.</span><br /></h1>
+            <h1 id="heading-de" class="language-de" style="display: none;">Wir verbinden Ihre Bedürfnisse mit technologischen Möglichkeiten<span>.</span><br /></h1>
+          <h2 id="heading-cs" class="language-cs">Jsme Váš partner ve světě technologií a zpracování.</h2>
+          <h2 id="heading-en" class="language-en" style="display: none;">We are your partner in the world of technology and processing.</h2>
+          <h2 id="heading-de" class="language-de" style="display: none;">Wir sind Ihr Partner in der Welt der Technologie und Verarbeitung.</h2>
         </div>
-    </header><!-- End Header -->
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center justify-content-center">
-        <div class="container" data-aos="fade-up">
+      </div>
 
-            <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-                <div class="col-xl-12 col-lg-8">
-                    <h1 id="heading-cs" class="language-cs">Propojujeme Vaše potřeby s technologickými možnostmi<span>.</span><br /></h1>
-                    <h1 id="heading-en" class="language-en" style="display: none;">We connect your needs with technological possibilities<span>.</span><br /></h1>
-                    <h1 id="heading-de" class="language-de" style="display: none;">Wir verbinden Ihre Bedürfnisse mit technologischen Möglichkeiten<span>.</span><br /></h1>
-                    <h2 id="heading-cs" class="language-cs">Jsme Váš partner ve světě technologií a zpracování.</h2>
-                    <h2 id="heading-en" class="language-en" style="display: none;">We are your partner in the world of technology and processing.</h2>
-                    <h2 id="heading-de" class="language-de" style="display: none;">Wir sind Ihr Partner in der Welt der Technologie und Verarbeitung.</h2>
-                </div>
-            </div>
-
-            <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-                <div class="col-xl-2 col-md-4">
-                    <div class="icon-box">
-                        <a class="nav-link scrollto" href="#services">
-                            <img src="assets\img\Icons\006-cnc-machine.png" class="img-fluid" alt=""><br />
-                            <h3 id="heading-cs" class="language-cs">Frézování</h3>
-                            <h3 id="heading-en" class="language-en" style="display:none">Milling</h3>
-                            <h3 id="heading-de" class="language-de" style="display:none">Fräsen</h3>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-md-4">
-                    <div class="icon-box">
-                        <a class="nav-link scrollto" href="#services">
-                            <img src="assets\img\Icons\004-machine.png" class="img-fluid" alt=""><br />
-                            <h3 id="heading-cs" class="language-cs">Soustružení</h3>
-                            <h3 id="heading-en" class="language-en" style="display:none">Turning</h3>
-                            <h3 id="heading-de" class="language-de" style="display:none">Drehen</h3>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-md-4">
-                    <div class="icon-box">
-                        <a class="nav-link scrollto" href="#services">
-                            <img src="assets\img\Icons\009-laser-cutting.png" class="img-fluid" alt=""><br />
-                            <h3 id="heading-cs" class="language-cs">Řezání laserem</h3>
-                            <h3 id="heading-en" class="language-en" style="display:none">Laser Cutting</h3>
-                            <h3 id="heading-de" class="language-de" style="display:none">Laserschneiden</h3>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-md-4">
-                    <div class="icon-box">
-                        <a class="nav-link scrollto" href="#services">
-                            <img src="assets\img\Icons\005-bending.png" class="img-fluid" alt=""><br />
-                            <h3 id="heading-cs" class="language-cs">CNC ohraňování</h3>
-                            <h3 id="heading-en" class="language-en" style="display:none">CNC Bending</h3>
-                            <h3 id="heading-de" class="language-de" style="display:none">CNC Biegen</h3>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-md-4">
-                    <div class="icon-box">
-                        <a class="nav-link scrollto" href="#services">
-                            <img src="assets\img\Icons\003-welding.png" class="img-fluid" alt=""><br />
-                            <h3 id="heading-cs" class="language-cs">Svařování</h3>
-                            <h3 id="heading-en" class="language-en" style="display:none">Welding</h3>
-                            <h3 id="heading-de" class="language-de" style="display:none">Schweißen</h3>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-md-4">
-                    <div class="icon-box">
-                        <a class="nav-link scrollto" href="#services">
-                            <img src="assets\img\Icons\paint-roller.png" class="img-fluid" alt=""><br />
-                            <h3 id="heading-cs" class="language-cs">Povrchové úpravy</h3>
-                            <h3 id="heading-en" class="language-en" style="display:none">Surface Treatments</h3>
-                            <h3 id="heading-de" class="language-de" style="display:none">Oberflächenbehandlung</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section><!-- End Hero -->
-
-    <main id="main">
-
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-            <div class="container" data-aos="fade-up">
-
-                <div class="row justify-content-center">
-                    <!-- ======= CZ ======= -->
-                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content language-cs" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Kdo jsme?</h3>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> Jsme dynamická firma s bohatými zkušenostmi v oblasti výroby a technických řešení. Naše hlavní poslání spočívá v poskytování kvalitních služeb a efektivních řešení, která odpovídají potřebám našich klientů.</li>
-                        </ul>
-                        <h3>Naše Mise a Hodnoty</h3>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> Jsme oddáni profesionálnímu přístupu, spolehlivosti a kvalitě. Snažíme se usnadnit každodenní život našim zákazníkům prostřednictvím důvěryhodných služeb, které jsou založeny na partnerském přístupu.</li>
-                        </ul>
-                        <h3>Naše Produkty a Služby</h3>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> Specializujeme se na CNC obrábění kovů a plastů, výrobu svařenců, řezání laserem, CNC ohraňování a povrchové úpravy. Naše služby zahrnují jak kusovou, tak malosériovou výrobu. Spolupracujeme s velkým počtem dodavatelů, což nám umožňuje dosáhnout nejlepších možných cen, které jsou pro naše zákazníky zajímavé. Snažíme se splnit každý požadavek našich klientů s maximální precizností a spokojeností.</li>
-                        </ul>
-                        <h3>Reference a Úspěchy</h3>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> Oceňujeme důvěru a spokojenost našich zákazníků, kteří nás považují za spolehlivého partnera. Jsme hrdí na každý úspěšně dokončený projekt, který přispěl k rozvoji našich klientů.</li>
-                        </ul>
-                    </div>
-
-                    <!-- ======= EN ======= -->
-                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content language-en" style="display:none" data-aos="fade-up" data-aos-delay="100">
-                        <h3>About Us</h3>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> We are a dynamic company with rich experience in manufacturing and technical solutions. Our main mission is to provide quality services and effective solutions that meet the needs of our clients.</li>
-                        </ul>
-                        <h3>Our Mission and Values</h3>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> We are committed to a professional approach, reliability, and quality. We strive to make everyday life easier for our customers through trustworthy services based on a partnership approach.</li>
-                        </ul>
-                        <h3>Our Products and Services</h3>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> We specialize in CNC machining of metals and plastics, welding fabrication, laser cutting, CNC bending, and surface finishing. Our services include both piece and small-batch production. We collaborate with a large number of suppliers, enabling us to achieve the best possible prices that are attractive to our customers. We aim to fulfill every requirement of our clients with maximum precision and satisfaction.</li>
-                        </ul>
-                        <h3>References and Achievements</h3>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> We appreciate the trust and satisfaction of our customers, who consider us a reliable partner. We are proud of every successfully completed project that has contributed to the development of our clients.</li>
-                        </ul>
-                    </div>
-
-
-                    <!-- ======= DE ======= -->
-                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content language-de" style="display:none" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Über uns</h3>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> Wir sind ein dynamisches Unternehmen mit reicher Erfahrung in der Herstellung und technischen Lösungen. Unsere Hauptaufgabe besteht darin, qualitativ hochwertige Dienstleistungen und effektive Lösungen anzubieten, die den Bedürfnissen unserer Kunden entsprechen.</li>
-                        </ul>
-                        <h3>Unsere Mission und Werte</h3>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> Wir sind engagiert für einen professionellen Ansatz, Zuverlässigkeit und Qualität. Wir bemühen uns, das tägliche Leben unserer Kunden durch vertrauenswürdige Dienstleistungen zu erleichtern, die auf einer partnerschaftlichen Herangehensweise basieren.</li>
-                        </ul>
-                        <h3>Unsere Produkte und Dienstleistungen</h3>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> Wir sind spezialisiert auf CNC-Bearbeitung von Metallen und Kunststoffen, Schweißkonstruktion, Laserschneiden, CNC-Biegen und Oberflächenbearbeitung. Unsere Dienstleistungen umfassen sowohl Stück- als auch Kleinserienproduktion. Wir arbeiten mit einer großen Anzahl von Lieferanten zusammen, was es uns ermöglicht, die bestmöglichen Preise zu erzielen, die für unsere Kunden attraktiv sind. Wir streben danach, jeden Anforderung unserer Kunden mit maximaler Präzision und Zufriedenheit zu erfüllen.</li>
-                        </ul>
-                        <h3>Referenzen und Erfolge</h3>
-                        <ul>
-                            <li><i class="ri-check-double-line"></i> Wir schätzen das Vertrauen und die Zufriedenheit unserer Kunden, die uns als zuverlässigen Partner betrachten. Wir sind stolz auf jedes erfolgreich abgeschlossene Projekt, das zur Entwicklung unserer Kunden beigetragen hat.</li>
-                        </ul>
-                    </div>
-
-
-                </div>
-            </div>
-        </section><!-- End About Section -->
-        <!-- ======= Clients Section =======
-        <section id="clients" class="clients">
-          <div class="container" data-aos="zoom-in">
-
-            <div class="clients-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+          <div class="col-xl-2 col-md-4">
+              <div class="icon-box">
+                  <a class="nav-link scrollto" href="#services">
+                    <img src="assets\img\Icons\006-cnc-machine.png" class="img-fluid" alt=""><br />
+                    <h3 id="heading-cs" class="language-cs">Frézování</h3>
+                    <h3 id="heading-en" class="language-en" style="display:none">Milling</h3>
+                    <h3 id="heading-de" class="language-de" style="display:none">Fräsen</h3>
+                  </a>
               </div>
-              <div class="swiper-pagination"></div>
+          </div>
+          <div class="col-xl-2 col-md-4">
+              <div class="icon-box">
+                  <a class="nav-link scrollto" href="#services">
+                      <img src="assets\img\Icons\004-machine.png" class="img-fluid" alt=""><br />
+                      <h3 id="heading-cs" class="language-cs">Soustružení</h3>
+                      <h3 id="heading-en" class="language-en" style="display:none">Turning</h3>
+                      <h3 id="heading-de" class="language-de" style="display:none">Drehen</h3>
+                  </a>
+              </div>
+          </div>
+          <div class="col-xl-2 col-md-4">
+              <div class="icon-box">
+                  <a class="nav-link scrollto" href="#services">
+                      <img src="assets\img\Icons\009-laser-cutting.png" class="img-fluid" alt=""><br />
+                      <h3 id="heading-cs" class="language-cs">Řezání laserem</h3>
+                      <h3 id="heading-en" class="language-en" style="display:none">Laser Cutting</h3>
+                      <h3 id="heading-de" class="language-de" style="display:none">Laserschneiden</h3>
+                  </a>
+              </div>
+          </div>
+          <div class="col-xl-2 col-md-4">
+              <div class="icon-box">
+                  <a class="nav-link scrollto" href="#services">
+                      <img src="assets\img\Icons\005-bending.png" class="img-fluid" alt=""><br />
+                      <h3 id="heading-cs" class="language-cs">CNC ohraňování</h3>
+                      <h3 id="heading-en" class="language-en" style="display:none">CNC Bending</h3>
+                      <h3 id="heading-de" class="language-de" style="display:none">CNC Biegen</h3>
+                  </a>
+              </div>
+          </div>
+          <div class="col-xl-2 col-md-4">
+              <div class="icon-box">
+                  <a class="nav-link scrollto" href="#services">
+                      <img src="assets\img\Icons\003-welding.png" class="img-fluid" alt=""><br />
+                      <h3 id="heading-cs" class="language-cs">Svařování</h3>
+                      <h3 id="heading-en" class="language-en" style="display:none">Welding</h3>
+                      <h3 id="heading-de" class="language-de" style="display:none">Schweißen</h3>
+                  </a>
+              </div>
+          </div>
+          <div class="col-xl-2 col-md-4">
+              <div class="icon-box">
+                  <a class="nav-link scrollto" href="#services">
+                      <img src="assets\img\Icons\paint-roller.png" class="img-fluid" alt=""><br />
+                      <h3 id="heading-cs" class="language-cs">Povrchové úpravy</h3>
+                      <h3 id="heading-en" class="language-en" style="display:none">Surface Treatments</h3>
+                      <h3 id="heading-de" class="language-de" style="display:none">Oberflächenbehandlung</h3>
+                  </a>
+              </div>
+          </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-up" data-aos-delay="100">
+                <h3>Kdo jsme</h3>
+                <ul>
+                    <li><i class="ri-check-double-line"></i> Jsme dynamická firma s bohatými zkušenostmi v oblasti výroby a technických řešení. Naše hlavní poslání spočívá v poskytování kvalitních služeb a efektivních řešení, která odpovídají potřebám našich klientů.</li>
+                </ul>
+                <h3>Naše Mise a Hodnoty</h3>
+                <ul>
+                    <li><i class="ri-check-double-line"></i> Jsme oddáni profesionálnímu přístupu, spolehlivosti a kvalitě. Snažíme se usnadnit každodenní život našim zákazníkům prostřednictvím důvěryhodných služeb, které jsou založeny na partnerském přístupu.</li>
+                </ul>
+                <h3>Naše Produkty a Služby</h3>
+                <ul>
+                    <li><i class="ri-check-double-line"></i> Specializujeme se na CNC obrábění kovů a plastů, výrobu svařenců, řezání laserem, CNC ohraňování a povrchové úpravy. Naše služby zahrnují jak kusovou, tak malosériovou výrobu. Spolupracujeme s velkým počtem dodavatelů, což nám umožňuje dosáhnout nejlepších možných cen, které jsou pro naše zákazníky zajímavé. Snažíme se splnit každý požadavek našich klientů s maximální precizností a spokojeností.</li>
+                </ul>
+                <h3>Reference a Úspěchy</h3>
+                <ul>
+                    <li><i class="ri-check-double-line"></i> Oceňujeme důvěru a spokojenost našich zákazníků, kteří nás považují za spolehlivého partnera. Jsme hrdí na každý úspěšně dokončený projekt, který přispěl k rozvoji našich klientů.</li>
+                </ul>
+
+            </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Clients Section ======= 
+    <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section> 
+
+    *****konec******  -->
+
+    <!-- End Clients Section -->
+
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Výroba</h2>
+          <p>Naše výrobní možnosti</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">Frézování</a></h4>
+              <p>Naše služby zahrnují frézování na CNC strojích s možností manipulace v rozsahu 3 až 5 os, což nám umožňuje dosáhnout precizních a složitých výsledků. Díky kombinaci špičkových strojů a zkušeného personálu jsme schopni splnit i ty nejnáročnější požadavky našich zákazníků.Pokud hledáte spolehlivého partnera pro frézování na CNC strojích, jste na správném místě. Kontaktujte nás ještě dnes a rádi vám poskytneme další informace a nabídku přizpůsobenou vašim potřebám.</p>
+                <br />
+                <h5><a class="nav-link scrollto " href="#contact">Zaslat poptávku</a></h5>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="">Soustružení</a></h4>
+              <p>
+                  Naše služby pokrývají soustružení od malých hřídelí až po hřídele délky 6 metrů, což nám umožňuje splnit širokou škálu požadavků našich zákazníků. Díky moderním CNC strojům a našemu zkušenému týmu profesionálů jsme schopni dosáhnout precizních výsledků a garantovat vysokou kvalitu našich výrobků. Bez ohledu na velikost vašeho projektu či složitost vašich požadavků jsme připraveni vám poskytnout individuální a flexibilní služby.
+              </p>
+              <br />
+              <h5><a class="nav-link scrollto " href="#contact">Zaslat poptávku</a></h5>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="">Řezání laserem</a></h4>
+              <p>Nabízíme jak řezání menších dílů s maximální přesností a detailností, tak i řezání větších formátů pro široké spektrum aplikací. Důraz klademe nejen na kvalitu našich výrobků, ale také na rychlost a efektivitu našich služeb. S námi získáte spolehlivého partnera pro vaše potřeby v oblasti řezání laserem. Pokud hledáte profesionální a spolehlivé služby řezání laserem, obraťte se na nás a rádi vám poskytneme další informace a nabídku přizpůsobenou vašim potřebám.</p>
+                <br />
+                <h5><a class="nav-link scrollto " href="#contact">Zaslat poptávku</a></h5>            
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4><a href="">CNC Ohraňování</a></h4>
+              <p>
+                  Naše nabídka zahrnuje širokou škálu speciálních nástrojů, které umožňují zpracování různých typů materiálů a tvarů. Díky precizní 3D přípravě rozvinů jsme schopni dosáhnout optimálních výsledků při ohýbání. Maximální délka, kterou dokážeme ohnout, dosahuje až 3230 mm, což nám umožňuje pracovat s velkými díly a konstrukcemi. S naší technologií a know-how jsme připraveni splnit i ty nejnáročnější požadavky našich zákazníků.
+              </p>
+                <br />
+                <h5><a class="nav-link scrollto " href="#contact">Zaslat poptávku</a></h5>            
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-slideshow"></i></div>
+              <h4><a href="">Svařování</a></h4>
+              <p>Bez ohledu na velikost vašeho projektu, jsme připraveni přijmout výzvu a dodat vám výrobky a svařence přesně podle vašich specifikací. Nabízíme flexibilní řešení pro různé průmyslové a obchodní aplikace, ať už potřebujete svařovat drobné díly pro strojírenství nebo velké konstrukce pro stavebnictví a průmyslové zařízení. Jsme schopni poskytnout vysokou úroveň přesnosti a kvality při svařování jakýchkoli typů oceli.</p>
+                <br />
+                <h5><a class="nav-link scrollto " href="#contact">Zaslat poptávku</a></h5>            
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-paint-roll"></i></div>
+              <h4><a href="">Povrchové úpravy</a></h4>
+              <p>
+                  <b>Zinkování -</b> Tento proces může být proveden žárovým nebo galvanickým způsobem a zajišťuje ochranu proti korozi a prodlužuje životnost materiálu.
+                  <br />
+                  <b>Lakování -</b> Povrchové úpravy lakováním mohou být provedeny buď práškovým lakováním, které poskytuje vynikající ochranu a estetický vzhled, nebo mokrým lakováním, které je vhodné pro složitější tvary a potřebuje kratší dobu na vytvrzení.
+                  <br />
+                  <b>Balotinování, tryskání, moření -</b> Tyto techniky povrchové úpravy jsou často využívány k úpravě povrchu k dosažení určitých estetických efektů nebo zlepšení adheze pro další zpracování.
+              </p>
+                <br />
+                <h5><a class="nav-link scrollto " href="#contact">Zaslat poptávku</a></h5>            
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Naše reference</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Kontakt</h2>
+          <p>Kontaktujte nás</p>
+        </div>
+
+        
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Adresa:</h4>
+                <p>Hvo</p>
+              </div>
+
+              <div class="email">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <a href="mailto:info@pjnservices.eu"><p>info@pjnservices.eu</p></a>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Tel:</h4>
+                <p>+420 737 756 205</p>
+              </div>
+
             </div>
 
           </div>
-        </section>
-
-        <!-- End Clients Section -->
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title language-cs">
-                    <h2>Výroba</h2>
-                    <p>Naše výrobní možnosti</p>
-                </div>
-                <div class="section-title language-en" style="display:none">
-                    <h2>Production</h2>
-                    <p>Our manufacturing capabilities</p>
-                </div>
-                <div class="section-title language-de style=" display:none"">
-                    <h2>Produktion</h2>
-                    <p>Unsere Fertigungsmöglichkeiten</p>
-                </div>
-
-                <!-- ======= CZ ======= -->
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box language-cs">
-                            <div class="icon"><img src="assets\img\Icons\006-cnc-machine-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Frézování</a></h4>
-                            <p>Naše služby zahrnují frézování na CNC strojích s možností manipulace v rozsahu 3 až 5 os, což nám umožňuje dosáhnout precizních a složitých výsledků. Díky kombinaci špičkových strojů a zkušeného personálu jsme schopni splnit i ty nejnáročnější požadavky našich zákazníků.Pokud hledáte spolehlivého partnera pro frézování na CNC strojích, jste na správném místě. Kontaktujte nás ještě dnes a rádi vám poskytneme další informace a nabídku přizpůsobenou vašim potřebám.</p>
-                            <br />
-                            <h5><a class="nav-link scrollto " href="#contact">Zaslat poptávku</a></h5>
-                        </div>
-                        <div class="icon-box language-en" style="display:none">
-                            <div class="icon"><img src="assets\img\Icons\006-cnc-machine-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Milling</a></h4>
-                            <p>Our services include milling on CNC machines with the ability to manipulate in the range of 3 to 5 axes, allowing us to achieve precise and complex results. Thanks to the combination of cutting-edge machines and experienced staff, we are able to meet even the most demanding requirements of our customers. If you are looking for a reliable partner for milling on CNC machines, you are in the right place. Contact us today and we will gladly provide you with further information and an offer tailored to your needs.</p>
-                            <br />
-                            <h5><a class="nav-link scrollto " href="#contact">Send Inquiry</a></h5>
-                        </div>
-                        <div class="icon-box language-de" style="display:none">
-                            <div class="icon"><img src="assets\img\Icons\006-cnc-machine-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Fräsen</a></h4>
-                            <p>Unsere Dienstleistungen umfassen Fräsen auf CNC-Maschinen mit der Möglichkeit der Manipulation im Bereich von 3 bis 5 Achsen, was es uns ermöglicht, präzise und komplexe Ergebnisse zu erzielen. Dank der Kombination aus hochmodernen Maschinen und erfahrenem Personal sind wir in der Lage, auch die anspruchsvollsten Anforderungen unserer Kunden zu erfüllen. Wenn Sie auf der Suche nach einem zuverlässigen Partner für das Fräsen auf CNC-Maschinen sind, sind Sie hier genau richtig. Kontaktieren Sie uns noch heute, und wir werden Ihnen gerne weitere Informationen und ein auf Ihre Bedürfnisse zugeschnittenes Angebot zur Verfügung stellen.</p>
-                            <br />
-                            <h5><a class="nav-link scrollto " href="#contact">Anfrage senden</a></h5>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="icon-box language-cs">
-                            <div class="icon"><img src="assets\img\Icons\004-machine-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Soustružení</a></h4>
-                            <p>
-                                Naše služby pokrývají soustružení od malých hřídelí až po hřídele délky 6 metrů, což nám umožňuje splnit širokou škálu požadavků našich zákazníků. Díky moderním CNC strojům a našemu zkušenému týmu profesionálů jsme schopni dosáhnout precizních výsledků a garantovat vysokou kvalitu našich výrobků. Bez ohledu na velikost vašeho projektu či složitost vašich požadavků jsme připraveni vám poskytnout individuální a flexibilní služby.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Zaslat poptávku</a></h5>
-                        </div>
-
-                        <div class="icon-box language-en" style="display:none">
-                            <div class="icon"><img src="assets\img\Icons\004-machine-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Turning</a></h4>
-                            <p>
-                                Our services cover turning from small shafts to shafts up to 6 meters long, allowing us to meet a wide range of our customers' needs. Thanks to modern CNC machines and our experienced team of professionals, we are able to achieve precise results and guarantee the high quality of our products. Regardless of the size of your project or the complexity of your requirements, we are ready to provide you with individual and flexible services.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Send Inquiry</a></h5>
-                        </div>
-
-                        <div class="icon-box language-de" style="display:none">
-                            <div class="icon"><img src="assets\img\Icons\004-machine-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Drehen</a></h4>
-                            <p>
-                                Unsere Dienstleistungen umfassen das Drehen von kleinen Wellen bis zu Wellen mit einer Länge von bis zu 6 Metern und ermöglichen es uns, eine breite Palette von Kundenanforderungen zu erfüllen. Dank moderner CNC-Maschinen und unserem erfahrenen Team von Fachleuten sind wir in der Lage, präzise Ergebnisse zu erzielen und die hohe Qualität unserer Produkte zu garantieren. Unabhängig von der Größe Ihres Projekts oder der Komplexität Ihrer Anforderungen sind wir bereit, Ihnen individuelle und flexible Dienstleistungen anzubieten.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Anfrage senden</a></h5>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="icon-box language-cs">
-                            <div class="icon"><img src="assets\img\Icons\009-laser-cutting-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Řezání laserem</a></h4>
-                            <p>
-                                Nabízíme jak řezání menších dílů s maximální přesností a detailností, tak i řezání větších formátů pro široké spektrum aplikací. Důraz klademe nejen na kvalitu našich výrobků, ale také na rychlost a efektivitu našich služeb. S námi získáte spolehlivého partnera pro vaše potřeby v oblasti řezání laserem. Pokud hledáte profesionální a spolehlivé služby řezání laserem, obraťte se na nás a rádi vám poskytneme další informace a nabídku přizpůsobenou vašim potřebám.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Zaslat poptávku</a></h5>
-                        </div>
-
-                        <div class="icon-box language-en" style="display:none">
-                            <div class="icon"><img src="assets\img\Icons\009-laser-cutting-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Laser Cutting</a></h4>
-                            <p>
-                                We offer both cutting of smaller parts with maximum precision and detail, as well as cutting of larger formats for a wide range of applications. We emphasize not only the quality of our products, but also the speed and efficiency of our services. With us, you will get a reliable partner for your laser cutting needs. If you are looking for professional and reliable laser cutting services, contact us and we will gladly provide you with further information and an offer tailored to your needs.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Send Inquiry</a></h5>
-                        </div>
-
-                        <div class="icon-box language-de" style="display:none">
-                            <div class="icon"><img src="assets\img\Icons\009-laser-cutting-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Laserschneiden</a></h4>
-                            <p>
-                                Wir bieten sowohl das Schneiden kleiner Teile mit maximaler Präzision und Detailtreue als auch das Schneiden größerer Formate für eine Vielzahl von Anwendungen an. Wir legen nicht nur Wert auf die Qualität unserer Produkte, sondern auch auf die Geschwindigkeit und Effizienz unserer Dienstleistungen. Mit uns erhalten Sie einen zuverlässigen Partner für Ihre Bedürfnisse im Bereich des Laserschneidens. Wenn Sie professionelle und zuverlässige Laserschneidedienste suchen, kontaktieren Sie uns, und wir werden Ihnen gerne weitere Informationen und ein auf Ihre Bedürfnisse zugeschnittenes Angebot zur Verfügung stellen.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Anfrage senden</a></h5>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box language-cs">
-                            <div class="icon"><img src="assets\img\Icons\005-bending-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">CNC Ohraňování</a></h4>
-                            <p>
-                                Naše nabídka zahrnuje širokou škálu speciálních nástrojů, které umožňují zpracování různých typů materiálů a tvarů. Díky precizní 3D přípravě rozvinů jsme schopni dosáhnout optimálních výsledků při ohýbání. Maximální délka, kterou dokážeme ohnout, dosahuje až 3230 mm, což nám umožňuje pracovat s velkými díly a konstrukcemi. S naší technologií a know-how jsme připraveni splnit i ty nejnáročnější požadavky našich zákazníků.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Zaslat poptávku</a></h5>
-                        </div>
-
-                        <div class="icon-box language-en" style="display:none">
-                            <div class="icon"><img src="assets\img\Icons\005-bending-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">CNC Bending</a></h4>
-                            <p>
-                                Our range includes a wide variety of special tools that allow processing of various types of materials and shapes. Thanks to precise 3D preparation of developments, we are able to achieve optimal results when bending. The maximum length we can bend reaches up to 3230 mm, allowing us to work with large parts and structures. With our technology and know-how, we are ready to meet even the most demanding requirements of our customers.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Send Inquiry</a></h5>
-                        </div>
-
-                        <div class="icon-box language-de" style="display:none">
-                            <div class="icon"><img src="assets\img\Icons\005-bending-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">CNC Biegen</a></h4>
-                            <p>
-                                Unser Sortiment umfasst eine Vielzahl von Spezialwerkzeugen, die die Bearbeitung verschiedener Materialien und Formen ermöglichen. Dank präziser 3D-Vorbereitung von Entwicklungen können wir optimale Ergebnisse beim Biegen erzielen. Die maximale Länge, die wir biegen können, beträgt bis zu 3230 mm, was es uns ermöglicht, mit großen Teilen und Konstruktionen zu arbeiten. Mit unserer Technologie und unserem Know-how sind wir bereit, auch die anspruchsvollsten Anforderungen unserer Kunden zu erfüllen.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Anfrage senden</a></h5>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="icon-box language-cs">
-                            <div class="icon"><img src="assets\img\Icons\003-welding-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Svařování</a></h4>
-                            <p>
-                                Bez ohledu na velikost vašeho projektu, jsme připraveni přijmout výzvu a dodat vám výrobky a svařence přesně podle vašich specifikací. Nabízíme flexibilní řešení pro různé průmyslové a obchodní aplikace, ať už potřebujete svařovat drobné díly pro strojírenství nebo velké konstrukce pro stavebnictví a průmyslové zařízení. Jsme schopni poskytnout vysokou úroveň přesnosti a kvality při svařování jakýchkoli typů oceli.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Zaslat poptávku</a></h5>
-                        </div>
-
-                        <div class="icon-box language-en" style="display:none">
-                            <div class="icon"><img src="assets\img\Icons\003-welding-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Welding</a></h4>
-                            <p>
-                                Regardless of the size of your project, we are ready to take on the challenge and deliver products and weldments exactly to your specifications. We offer flexible solutions for various industrial and commercial applications, whether you need to weld small parts for engineering or large structures for construction and industrial equipment. We are able to provide high precision and quality welding services for any type of steel.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Send Inquiry</a></h5>
-                        </div>
-
-                        <div class="icon-box language-de" style="display:none">
-                            <div class="icon"><img src="assets\img\Icons\003-welding-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Schweißen</a></h4>
-                            <p>
-                                Unabhängig von der Größe Ihres Projekts sind wir bereit, die Herausforderung anzunehmen und Produkte sowie Schweißkonstruktionen genau nach Ihren Spezifikationen zu liefern. Wir bieten flexible Lösungen für verschiedene industrielle und kommerzielle Anwendungen, ob Sie nun kleine Teile für die Ingenieurwissenschaften oder große Strukturen für Bauwesen und Industrieanlagen schweißen müssen. Wir sind in der Lage, hochpräzise und qualitativ hochwertige Schweißdienstleistungen für jede Art von Stahl anzubieten.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Anfrage senden</a></h5>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="icon-box language-cs">
-                            <div class="icon"><img src="assets\img\Icons\paint-roller-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Povrchové úpravy</a></h4>
-                            <p>
-                                <b>Zinkování -</b> Tento proces může být proveden žárovým nebo galvanickým způsobem a zajišťuje ochranu proti korozi a prodlužuje životnost materiálu.
-                                <br />
-                                <b>Lakování -</b> Povrchové úpravy lakováním mohou být provedeny buď práškovým lakováním, které poskytuje vynikající ochranu a estetický vzhled, nebo mokrým lakováním, které je vhodné pro složitější tvary a potřebuje kratší dobu na vytvrzení.
-                                <br />
-                                <b>Balotinování, tryskání, moření -</b> Tyto techniky povrchové úpravy jsou často využívány k úpravě povrchu k dosažení určitých estetických efektů nebo zlepšení adheze pro další zpracování.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Zaslat poptávku</a></h5>
-                        </div>
-
-                        <div class="icon-box language-en" style="display:none">
-                            <div class="icon"><img src="assets\img\Icons\paint-roller-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Surface Treatment</a></h4>
-                            <p>
-                                <b>Galvanizing -</b> This process can be done by either flame or galvanic method and provides protection against corrosion and extends the lifespan of the material.
-                                <br />
-                                <b>Painting -</b> Surface treatments by painting can be done either by powder coating, which provides excellent protection and aesthetic appearance, or by wet painting, which is suitable for more complex shapes and requires a shorter curing time.
-                                <br />
-                                <b>Blanching, spraying, staining -</b> These surface treatment techniques are often used to modify the surface to achieve certain aesthetic effects or to improve adhesion for further processing.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Send Inquiry</a></h5>
-                        </div>
-
-                        <div class="icon-box language-de" style="display:none">
-                            <div class="icon"><img src="assets\img\Icons\paint-roller-bg.png" class="img-fluid" alt=""></div>
-                            <h4><a href="">Oberflächenbehandlung</a></h4>
-                            <p>
-                                <b>Verzinken -</b> Dieser Prozess kann entweder durch Flammen- oder galvanische Methode erfolgen und bietet Schutz gegen Korrosion sowie Verlängerung der Lebensdauer des Materials.
-                                <br />
-                                <b>Lackieren -</b> Oberflächenbehandlungen durch Lackieren können entweder durch Pulverbeschichtung erfolgen, die einen ausgezeichneten Schutz und ästhetisches Aussehen bietet, oder durch Nasslackierung, die für komplexere Formen geeignet ist und eine kürzere Aushärtezeit erfordert.
-                                <br />
-                                <b>Blanchieren, Sprühen, Färben -</b> Diese Oberflächenbehandlungstechniken werden oft verwendet, um die Oberfläche zu verändern, um bestimmte ästhetische Effekte zu erzielen oder die Haftung für weitere Verarbeitung zu verbessern.
-                            </p>
-                            <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Anfrage senden</a></h5>
-                        </div>
-
-                    </div>
 
 
-
-                </div>
+<div class="col-lg-8 mt-5 mt-lg-0">
+    <form id="myForm" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Jméno" required>
             </div>
-        </section><!-- End Services Section -->
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title language-cs">
-                    <h2>Portfolio</h2>
-                    <p>Naše reference</p>
-                </div>
-                <div class="section-title language-en" style="display:none">
-                    <h2>Portfolio</h2>
-                    <p>Our references</p>
-                </div>
-                <div class="section-title language-de" style="display:none">
-                    <h2>Portfolio</h2>
-                    <p>Unsere Referenzen</p>
-                </div>
-
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
-                            <li data-filter=".filter-web">Web</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 1</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 2</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 2</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 2</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>App 3</h4>
-                                <p>App</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 1</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Card 3</h4>
-                                <p>Card</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Web 3</h4>
-                                <p>Web</p>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                                    portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section><!-- End Portfolio Section -->
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-title language-cs">
-                    <h2>Kontakt</h2>
-                    <p>Kontaktujte nás</p>
-                </div>
-                <div class="section-title language-en" style="display:none">
-                    <h2>Contact</h2>
-                    <p>Contact Us</p>
-                </div>
-                <div class="section-title language-de" style="display:none">
-                    <h2>Kontakt</h2>
-                    <p>Kontaktieren Sie uns</p>
-                </div>
-
-
-                <div class="row mt-5">
-
-                    <div class="col-lg-4">
-                        <div class="info">
-                            <!--
-                            <div class="address">
-                                <i class="bi bi-geo-alt"></i>
-                                <h4>Adresa:</h4>
-                                <p>Hvo</p>
-                            </div>
-                            -->
-                            <div class="email">
-                                <i class="bi bi-envelope"></i>
-                                <h4>Email:</h4>
-                                <a href="mailto:info@pjnservices.eu"><p>info@pjnservices.eu</p></a>
-                            </div>
-
-                            <div class="phone">
-                                <i class="bi bi-phone"></i>
-                                <h4>Tel:</h4>
-                                <p>+420 737 756 205</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-lg-8 mt-5 mt-lg-0">
-                        <form id="myForm" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
-                            <div class="row">
-                                <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Jméno" required>
-                                </div>
-                                <div class="col-md-6 form-group mt-3 mt-md-0">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-                                </div>
-                            </div>
-                            <div class="form-group mt-3">
-                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Předmět zpávy" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="attachment" class="form-label language-cs">Přidat soubory (podporuje hromadný výběr)</label>
-                                <label for="attachment" class="form-label language-en">Add files (supports bulk selection)</label>
-                                <label for="attachment" class="form-label language-de">Dateien hinzufügen (unterstützt die Stapelauswahl)</label>
-                                <input class="form-control" type="file" name="attachment[]" id="attachment" multiple>
-                            </div>
-                            <div class="form-group mt-3">
-                                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Zpráva" required></textarea>
-                            </div>
-                            <div class="my-3">
-                                <div class="loading" style="display: none;">Loading</div> <!-- Přidáno style="display: none;" pro skrytí na začátku -->
-                                <div class="error-message"></div>
-                                <div class="sent-message">
-                                    <div class="language-cs">Vaše poptávka byla odeslána. Děkujeme!</div>
-                                    <div class="language-en" style="display:none">Your inquiry has been sent. Thank you!</div>
-                                    <div class="language-de" style="display:none">Ihre Anfrage wurde gesendet. Vielen Dank!</div>
-                                </div>
-                            </div>
-
-                            <div class="text-center">
-                                <div class="language-cs"><button type="submit">Odeslat</button></div>
-                                <div class="language-en" style="display:none"><button type="submit">send Message</button></div>
-                                <div class="language-de" style="display:none"><button type="submit">Nachricht senden</button></div>
-                            </div>
-                        </form>
-                    </div>
-
-
-
-
-
-                </div>
-
-            </div>
-        </section><!-- End Contact Section -->
-
-    </main><!-- End #main -->
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-info">
-                            <h3>PJN Services<span>.</span></h3>
-                            <p>
-                                <strong>Tel.:</strong> +420 737 756 205<br>
-                                <strong>Email:</strong> info@pjnservices.eu<br>
-                                <strong>IČ:</strong> 123456789<br>
-                            </p>
-                        </div>
-                    </div>
-
-
-
-                </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
             </div>
         </div>
-
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>PJN Services</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-                Designed by <a href="">PJN Services</a>
-            </div>
+        <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Předmět zpávy" required>
         </div>
-    </footer><!-- End Footer -->
+        <div class="mb-3">
+            <label for="attachment" class="form-label">Přidat soubory (podporuje hromadný výběr)</label>
+            <input class="form-control" type="file" name="attachment[]" id="attachment" multiple>
+        </div>
+        <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Zpráva" required></textarea>
+        </div>
+        <div class="my-3">
+            <div class="loading" style="display: none;">Loading</div> <!-- Přidáno style="display: none;" pro skrytí na začátku -->
+            <div class="error-message"></div>
+            <div class="sent-message">Vaše poptávka byla odeslána. Děkujeme!</div>
+        </div>
 
-    <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        <div class="text-center"><button type="submit">Odeslat</button></div>
+    </form>
+</div>
 
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <!--    <script src="assets/vendor/php-email-form/validate.js"></script>     -->
-    <!-- Template Main JS File -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/main.js"></script>
 
-    <script>
-        function changePlaceholder(language) {
-            var nameInput = document.getElementById('name');
-            var subjectInput = document.getElementById('subject');
-            var messageInput = document.getElementById('message');
-            if (language === 'cs') {
-                nameInput.placeholder = 'Jméno';
-                subjectInput.placeholder = 'Předmět zprávy';
-                messageInput.placeholder = 'Zpráva';
-            } else if (language === 'en') {
-                nameInput.placeholder = 'Name';
-                subjectInput.placeholder = 'Subject';
-                messageInput.placeholder = 'Text of the message';
-            } else if (language === 'de') {
-                nameInput.placeholder = 'Name';
-                subjectInput.placeholder = 'Thema';
-                messageInput.placeholder = 'Text der Nachricht';
-            }
-        }
 
-        function changeLanguage(language) {
-            changePlaceholder(language);
-            // Zde můžete přidat další akce, které chcete provést při změně jazyka
-        }
 
-        // Zjistění jazyka prohlížeče
-        var browserLanguage = navigator.language || navigator.userLanguage;
-        var initialLanguage = browserLanguage.substring(0, 2); // Získání prvních dvou znaků jazyka
-        changePlaceholder(initialLanguage);
-    </script>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>PJN Services<span>.</span></h3>
+              <p>
+                <strong>Tel.:</strong> +420 737 756 205<br>
+                <strong>Email:</strong> info@pjnservices.eu<br>
+                <strong>IČ:</strong> 123456789<br>
+              </p>
+             </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>PJN Services</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
+        Designed by <a href="">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!--    <script src="assets/vendor/php-email-form/validate.js"></script>     -->
+
+  <!-- Template Main JS File -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 

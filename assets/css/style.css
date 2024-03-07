@@ -680,9 +680,9 @@ section {
   transition: 0.3s;
 }
 
-.services .icon-box .icon img {
+.services .icon-box .icon i {
   color: #151515;
-  max-width: 40px;
+  font-size: 28px;
   transition: ease-in-out 0.3s;
 }
 
@@ -1346,7 +1346,6 @@ section {
   color: #151515;
   transition: 0.4s;
   border-radius: 4px;
-  align-self:center;
 }
 
 .contact .php-email-form button[type=submit]:hover {

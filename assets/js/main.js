@@ -129,6 +129,18 @@
         }
     }, true)
 
+    // Pøidání události kliknutí na odkazy v menu
+    on('click', '#navbar a', function (e) {
+        // Kontrola, zda je navigaèní menu ve stavu mobilního menu
+        if (select('#navbar').classList.contains('navbar-mobile')) {
+            // Skrytí navigaèního menu
+            select('#navbar').classList.remove('navbar-mobile');
+            // Zmìna ikony mobilního toggle menu z "X" na "Burger"
+            select('.mobile-nav-toggle').classList.toggle('bi-list');
+            select('.mobile-nav-toggle').classList.toggle('bi-x');
+        }
+    });
+
 
   /**
    * Scrool with ofset on links with a class name .scrollto

@@ -489,12 +489,28 @@
         });
 
         // Pøidání event listeneru pro každou položku dropdownu
-        navbar.querySelectorAll('.dropdown a').forEach(dropdownItem => {
-            dropdownItem.addEventListener('click', () => {
-                closeMobileNav();
+        navbar.querySelectorAll('.dropdown > a').forEach(dropdownToggle => {
+            dropdownToggle.addEventListener('click', (e) => {
+                e.preventDefault(); // Zabrání výchozímu chování odkazu
+                navbar.querySelectorAll('.dropdown').forEach(dropdown => {
+                    if (dropdown !== dropdownToggle.parentElement) {
+                        dropdown.classList.remove('dropdown-active');
+                    }
+                });
+                dropdownToggle.parentElement.classList.toggle('dropdown-active');
             });
         });
+
+        // Pøidání event listeneru pro zavøení dropdownu pøi kliknutí mimo nìj
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target)) {
+                navbar.querySelectorAll('.dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('dropdown-active');
+                });
+            }
+        });
     });
+
 
 
 

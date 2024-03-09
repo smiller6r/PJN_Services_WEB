@@ -124,19 +124,10 @@
    */
     on('click', '.navbar .dropdown > a', function (e) {
         if (select('#navbar').classList.contains('navbar-mobile')) {
-            e.preventDefault();
-            var dropdownMenu = this.nextElementSibling;
-            dropdownMenu.classList.toggle('dropdown-active');
-
-            // Zavøít dropdown menu po kliknutí na odkaz
-            var menuLinks = dropdownMenu.querySelectorAll('.dropdown-item');
-            menuLinks.forEach(function (link) {
-                link.addEventListener('click', function () {
-                    dropdownMenu.classList.remove('dropdown-active');
-                });
-            });
+            e.preventDefault()
+            this.nextElementSibling.classList.toggle('dropdown-active')
         }
-    }, true);
+    }, true)
 
 
   /**

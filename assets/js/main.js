@@ -464,6 +464,22 @@
                 changeLanguage(selectedLanguage);
             });
         });
+
+
+        // Vyberte všechny odkazy v dropdown menu
+        var dropdownLinks = document.querySelectorAll('.dropdown ul li a');
+
+        // Pøidání posluchaèe událostí kliknutí na každý odkaz v dropdown menu
+        dropdownLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // Zavøení dropdown menu
+                var dropdownMenu = link.closest('.dropdown').querySelector('ul');
+                dropdownMenu.classList.remove('show');
+            });
+        });
+
+
+
     });
 
 

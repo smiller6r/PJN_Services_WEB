@@ -354,20 +354,6 @@
             document.cookie = "selectedLanguage=" + language + ";path=/";
         }
 
-
-        on('click', '#navbar a', function (e) {
-            // Kontrola, zda je navigaèní menu ve stavu mobilního menu
-            if (select('#navbar').classList.contains('navbar-mobile')) {
-                // Skrytí navigaèního menu
-                select('#navbar').classList.remove('navbar-mobile');
-                // Zmìna ikony mobilního toggle menu z "X" na "Burger"
-                select('.mobile-nav-toggle').classList.toggle('bi-list');
-                select('.mobile-nav-toggle').classList.toggle('bi-x');
-            }
-        });
-
-
-
         // Funkce pro získání hodnoty cookie
         function getLanguageCookie() {
             var name = "selectedLanguage=";
@@ -489,6 +475,26 @@
     });
 
 
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+        const navbar = document.querySelector('#navbar');
+
+        // Funkce pro zmìnu ikony na mobilním menu
+        const toggleMobileNavIcon = () => {
+            mobileNavToggle.classList.toggle('bi-list');
+            mobileNavToggle.classList.toggle('bi-x');
+        };
+
+        // Pøidání event listeneru pro každý odkaz v navigaèním menu
+        navbar.querySelectorAll('.nav-link').forEach(navLink => {
+            navLink.addEventListener('click', () => {
+                // Zavøení mobilního menu
+                navbar.classList.remove('navbar-mobile');
+                // Zmìna ikony na mobilním menu
+                toggleMobileNavIcon();
+            });
+        });
+    });
 
 
 

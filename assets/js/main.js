@@ -122,14 +122,12 @@
   /**
    * Mobile nav dropdowns activate
    */
-    on('click', '.navbar .dropdown > a', function (e) {
-        if (select('#navbar').classList.contains('navbar-mobile')) {
-            e.preventDefault()
-            this.nextElementSibling.classList.toggle('dropdown-active')
-        }
-    }, true)
-
-
+  on('click', '.navbar .dropdown > a', function(e) {
+    if (select('#navbar').classList.contains('navbar-mobile')) {
+      e.preventDefault()
+      this.nextElementSibling.classList.toggle('dropdown-active')
+    }
+  }, true)
 
   /**
    * Scrool with ofset on links with a class name .scrollto
@@ -456,23 +454,10 @@
                 changeLanguage(selectedLanguage);
             });
         });
-
-
-        // Vyberte všechny odkazy v dropdown menu
-        var dropdownLinks = document.querySelectorAll('.dropdown ul li a');
-
-        // Pøidání posluchaèe událostí kliknutí na každý odkaz v dropdown menu
-        dropdownLinks.forEach(function (link) {
-            link.addEventListener('click', function () {
-                // Zavøení dropdown menu
-                var dropdownMenu = link.closest('.dropdown').querySelector('ul');
-                dropdownMenu.classList.remove('show');
-            });
-        });
-
-
-
     });
+
+
+
 
 
 

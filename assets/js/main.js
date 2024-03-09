@@ -122,12 +122,23 @@
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
-    if (select('#navbar').classList.contains('navbar-mobile')) {
-      e.preventDefault()
-      this.nextElementSibling.classList.toggle('dropdown-active')
-    }
-  }, true)
+    on('click', '.navbar .dropdown > a', function (e) {
+        if (select('#navbar').classList.contains('navbar-mobile')) {
+            e.preventDefault();
+            var dropdownMenu = this.nextElementSibling;
+            dropdownMenu.classList.toggle('dropdown-active');
+
+            // Zavøít dropdown menu, pokud uživatel klikne na odkaz
+            if (dropdownMenu.classList.contains('dropdown-active')) {
+                var menuLinks = dropdownMenu.querySelectorAll('.dropdown-item');
+                menuLinks.forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        dropdownMenu.classList.remove('dropdown-active');
+                    });
+                });
+            }
+        }
+    }, true);
 
   /**
    * Scrool with ofset on links with a class name .scrollto

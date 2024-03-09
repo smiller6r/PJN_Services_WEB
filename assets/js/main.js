@@ -475,35 +475,6 @@
     });
 
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-        const navbar = document.querySelector('#navbar');
-
-        // Funkce pro zmìnu ikony na mobilním menu
-        const toggleMobileNavIcon = () => {
-            mobileNavToggle.classList.toggle('bi-list');
-            mobileNavToggle.classList.toggle('bi-x');
-        };
-
-        // Pøidání event listeneru pro kliknutí na ikonu mobilního menu
-        mobileNavToggle.addEventListener('click', () => {
-            navbar.classList.toggle('navbar-mobile');
-            toggleMobileNavIcon();
-        });
-
-        // Pøidání event listeneru pro každý odkaz v navigaèním menu
-        navbar.querySelectorAll('.nav-link').forEach(navLink => {
-            navLink.addEventListener('click', () => {
-                if (navbar.classList.contains('navbar-mobile')) {
-                    navbar.classList.remove('navbar-mobile');
-                    toggleMobileNavIcon();
-                }
-            });
-        });
-    });
-
-
-
 
   /**
    * Initiate Pure Counter 

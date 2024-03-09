@@ -485,13 +485,19 @@
             mobileNavToggle.classList.toggle('bi-x');
         };
 
+        // Pøidání event listeneru pro kliknutí na ikonu mobilního menu
+        mobileNavToggle.addEventListener('click', () => {
+            navbar.classList.toggle('navbar-mobile');
+            toggleMobileNavIcon();
+        });
+
         // Pøidání event listeneru pro každý odkaz v navigaèním menu
         navbar.querySelectorAll('.nav-link').forEach(navLink => {
             navLink.addEventListener('click', () => {
-                // Zavøení mobilního menu
-                navbar.classList.remove('navbar-mobile');
-                // Zmìna ikony na mobilním menu
-                toggleMobileNavIcon();
+                if (navbar.classList.contains('navbar-mobile')) {
+                    navbar.classList.remove('navbar-mobile');
+                    toggleMobileNavIcon();
+                }
             });
         });
     });

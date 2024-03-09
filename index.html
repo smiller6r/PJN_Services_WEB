@@ -112,7 +112,7 @@
             </div>
 
             <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-                <div class="col-xl-2 col-md-4">
+                <div class="col-6 col-md-4 col-xl-2">
                     <div class="icon-box">
                         <a class="nav-link scrollto" href="#services">
                             <img src="assets\img\Icons\006-cnc-machine.png" class="img-fluid" alt=""><br />
@@ -122,7 +122,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-2 col-md-4">
+                <div class="col-6 col-md-4 col-xl-2">
                     <div class="icon-box">
                         <a class="nav-link scrollto" href="#services">
                             <img src="assets\img\Icons\004-machine.png" class="img-fluid" alt=""><br />
@@ -132,7 +132,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-2 col-md-4">
+                <div class="col-6 col-md-4 col-xl-2">
                     <div class="icon-box">
                         <a class="nav-link scrollto" href="#services">
                             <img src="assets\img\Icons\009-laser-cutting.png" class="img-fluid" alt=""><br />
@@ -142,7 +142,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-2 col-md-4">
+                <div class="col-6 col-md-4 col-xl-2">
                     <div class="icon-box">
                         <a class="nav-link scrollto" href="#services">
                             <img src="assets\img\Icons\005-bending.png" class="img-fluid" alt=""><br />
@@ -152,7 +152,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-2 col-md-4">
+                <div class="col-6 col-md-4 col-xl-2">
                     <div class="icon-box">
                         <a class="nav-link scrollto" href="#services">
                             <img src="assets\img\Icons\003-welding.png" class="img-fluid" alt=""><br />
@@ -162,9 +162,9 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-2 col-md-4">
+                <div class="col-6 col-md-4 col-xl-2">
                     <div class="icon-box">
-                        <a class="nav-link scrollto" href="#services">
+                        <a class="nav-link scrollto" href="#surface">
                             <img src="assets\img\Icons\paint-roller.png" class="img-fluid" alt=""><br />
                             <h3 id="heading-cs" class="language-cs">Povrchové úpravy</h3>
                             <h3 id="heading-en" class="language-en" style="display:none">Surface Treatments</h3>
@@ -421,7 +421,7 @@
                                 Bez ohledu na velikost vašeho projektu, jsme připraveni přijmout výzvu a dodat vám výrobky a svařence přesně podle vašich specifikací. Nabízíme flexibilní řešení pro různé průmyslové a obchodní aplikace, ať už potřebujete svařovat drobné díly pro strojírenství nebo velké konstrukce pro stavebnictví a průmyslové zařízení. Jsme schopni poskytnout vysokou úroveň přesnosti a kvality při svařování jakýchkoli typů oceli.
                             </p>
                             <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Zaslat poptávku</a></h5>
+                            <h5><a id="surface" class="nav-link scrollto" href="#contact">Zaslat poptávku</a></h5>
                         </div>
 
                         <div class="icon-box language-en" style="display:none">
@@ -431,7 +431,7 @@
                                 Regardless of the size of your project, we are ready to take on the challenge and deliver products and weldments exactly to your specifications. We offer flexible solutions for various industrial and commercial applications, whether you need to weld small parts for engineering or large structures for construction and industrial equipment. We are able to provide high precision and quality welding services for any type of steel.
                             </p>
                             <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Send Inquiry</a></h5>
+                            <h5><a id="surface" class="nav-link scrollto" href="#contact">Send Inquiry</a></h5>
                         </div>
 
                         <div class="icon-box language-de" style="display:none">
@@ -441,7 +441,7 @@
                                 Unabhängig von der Größe Ihres Projekts sind wir bereit, die Herausforderung anzunehmen und Produkte sowie Schweißkonstruktionen genau nach Ihren Spezifikationen zu liefern. Wir bieten flexible Lösungen für verschiedene industrielle und kommerzielle Anwendungen, ob Sie nun kleine Teile für die Ingenieurwissenschaften oder große Strukturen für Bauwesen und Industrieanlagen schweißen müssen. Wir sind in der Lage, hochpräzise und qualitativ hochwertige Schweißdienstleistungen für jede Art von Stahl anzubieten.
                             </p>
                             <br />
-                            <h5><a class="nav-link scrollto" href="#contact">Anfrage senden</a></h5>
+                            <h5><a id="surface" class="nav-link scrollto" href="#contact">Anfrage senden</a></h5>
                         </div>
 
                     </div>
@@ -805,36 +805,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <script>
-        function changePlaceholder(language) {
-            var nameInput = document.getElementById('name');
-            var subjectInput = document.getElementById('subject');
-            var messageInput = document.getElementById('message');
-            if (language === 'cs') {
-                nameInput.placeholder = 'Jméno';
-                subjectInput.placeholder = 'Předmět zprávy';
-                messageInput.placeholder = 'Zpráva';
-            } else if (language === 'en') {
-                nameInput.placeholder = 'Name';
-                subjectInput.placeholder = 'Subject';
-                messageInput.placeholder = 'Text of the message';
-            } else if (language === 'de') {
-                nameInput.placeholder = 'Name';
-                subjectInput.placeholder = 'Thema';
-                messageInput.placeholder = 'Text der Nachricht';
-            }
-        }
 
-        function changeLanguage(language) {
-            changePlaceholder(language);
-            // Zde můžete přidat další akce, které chcete provést při změně jazyka
-        }
-
-        // Zjistění jazyka prohlížeče
-        var browserLanguage = navigator.language || navigator.userLanguage;
-        var initialLanguage = browserLanguage.substring(0, 2); // Získání prvních dvou znaků jazyka
-        changePlaceholder(initialLanguage);
-    </script>
 
 </body>
 

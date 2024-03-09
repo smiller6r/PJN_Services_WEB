@@ -499,6 +499,10 @@ h6 {
     font-size: 20px;
     line-height: 24px;
   }
+
+  #hero .icon-box img{
+      display:none;
+  }
 }
 
 #hero .icon-box img {

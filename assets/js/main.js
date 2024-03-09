@@ -64,16 +64,19 @@
   /**
    * Scrolls to an element with header offset
    */
-  const scrollto = (el) => {
-    let header = select('#header')
-    let offset = header.offsetHeight
+    const scrollto = (el) => {
+        let header = select('#header');
+        let headerOffset = header.offsetHeight;
+        let targetElement = select(el);
+        let targetOffset = targetElement.getBoundingClientRect().top + window.scrollY;
 
-    let elementPos = select(el).offsetTop
-    window.scrollTo({
-      top: elementPos - offset,
-      behavior: 'smooth'
-    })
-  }
+        window.scrollTo({
+            top: targetOffset - headerOffset,
+            behavior: 'smooth'
+        });
+    };
+
+    
 
   /**
    * Toggle .header-scrolled class to #header when page is scrolled
@@ -129,31 +132,45 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
-    if (select(this.hash)) {
-      e.preventDefault()
+    on('click', '.scrollto', function (e) {
+        if (select(this.hash)) {
+            e.preventDefault()
 
-      let navbar = select('#navbar')
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-      scrollto(this.hash)
-    }
-  }, true)
+            let navbar = select('#navbar')
+            if (navbar.classList.contains('navbar-mobile')) {
+                navbar.classList.remove('navbar-mobile')
+                let navbarToggle = select('.mobile-nav-toggle')
+                navbarToggle.classList.toggle('bi-list')
+                navbarToggle.classList.toggle('bi-x')
+            }
+
+            // Get the target element's ID
+            let target = select(this.hash);
+
+            // Perform scrolling after animation completion
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }, true)
 
   /**
    * Scroll with ofset on page load with hash links in the url
    */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
-    }
-  });
+    window.addEventListener('load', () => {
+        if (window.location.hash) {
+            if (select(window.location.hash)) {
+                let target = select(window.location.hash);
+                setTimeout(() => {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 1000); // Delay for scrolling to the page
+            }
+        }
+    });
 
   /**
    * Preloader
@@ -373,6 +390,9 @@
 
             // Uloží vybraný jazyk do souboru cookie
             setLanguageCookie(language);
+
+            // Aktualizuje placeholder na základì vybraného jazyka
+            changePlaceholder(language);
         }
 
         // Funkce pro nastavení jazyka podle nastavení prohlížeèe
@@ -387,6 +407,27 @@
                 changeLanguage("en");
             }
         }
+
+        // Funkce pro nastavení placeholderù na základì vybraného jazyka
+        function changePlaceholder(language) {
+            var nameInput = document.getElementById('name');
+            var subjectInput = document.getElementById('subject');
+            var messageInput = document.getElementById('message');
+            if (language === 'cs') {
+                nameInput.placeholder = 'Jm\u00e9no'; // Jméno
+                subjectInput.placeholder = 'P\u0159edm\u011bt zpr\u00e1vy'; // Pøedmìt zprávy
+                messageInput.placeholder = 'Zpr\u00e1va'; // Zpráva
+            } else if (language === 'en') {
+                nameInput.placeholder = 'Name';
+                subjectInput.placeholder = 'Subject';
+                messageInput.placeholder = 'Text of the message';
+            } else if (language === 'de') {
+                nameInput.placeholder = 'Name';
+                subjectInput.placeholder = 'Thema';
+                messageInput.placeholder = 'Text der Nachricht';
+            }
+        }
+
 
         // Naète uložený jazyk z cookies a zobrazí ho
         var savedLanguage = getLanguageCookie();
@@ -413,18 +454,8 @@
                 changeLanguage(selectedLanguage);
             });
         });
-
-        // Pøidání posluchaèù událostí kliknutí na odkazy pro zmìnu jazyka u odkazù
-        document.getElementById('heading-cs').addEventListener('click', function () {
-            changeLanguage('cs');
-        });
-        document.getElementById('heading-en').addEventListener('click', function () {
-            changeLanguage('en');
-        });
-        document.getElementById('heading-de').addEventListener('click', function () {
-            changeLanguage('de');
-        });
     });
+
 
 
 

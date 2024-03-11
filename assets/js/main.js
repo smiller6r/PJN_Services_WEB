@@ -66,7 +66,7 @@
    */
     const scrollto = (el) => {
         let header = select('#header');
-        let headerOffset = header.offsetHeight +5000;
+        let headerOffset = header.offsetHeight;
         let targetElement = select(el);
         let targetOffset = targetElement.getBoundingClientRect().top + window.scrollY;
 

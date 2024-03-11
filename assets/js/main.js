@@ -46,7 +46,7 @@
    */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
-    let position = window.scrollY + 500
+    let position = window.scrollY + 200
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
@@ -66,7 +66,7 @@
    */
     const scrollto = (el) => {
         let header = select('#header');
-        let headerOffset = header.offsetHeight;
+        let headerOffset = header.offsetHeight +500;
         let targetElement = select(el);
         let targetOffset = targetElement.getBoundingClientRect().top + window.scrollY;
 

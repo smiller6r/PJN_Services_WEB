@@ -372,7 +372,7 @@ h6 {
   padding: 10px 0;
   z-index: 99;
   opacity: 1;
-  visibility: visible;
+  visibility: collapse;
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
@@ -397,7 +397,7 @@ h6 {
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
-  display: block;
+  display:  block;
 }
 
 /*--------------------------------------------------------------

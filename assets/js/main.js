@@ -454,6 +454,32 @@
                 changeLanguage(selectedLanguage);
             });
         });
+
+
+        // Funkce pro smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                const offset = 380; // Zde mùžete upravit vzdálenost, o kterou se stránka posune od místa s ID
+
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest'
+                });
+
+                // Posunutí stránky o urèenou vzdálenost
+                const scrollTarget = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({
+                    top: scrollTarget,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+
     });
 
 

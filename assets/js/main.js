@@ -459,6 +459,8 @@
                 targetOffset -= 180; // Další posun pro "#milling"
             } else if (el === "#turning") {
                 targetOffset -= 180;
+            } else if (el === "#lasercutting") {
+                targetOffset -= 180;
             }
             
         

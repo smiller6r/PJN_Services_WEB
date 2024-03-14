@@ -64,7 +64,17 @@
   /**
    * Scrolls to an element with header offset
    */
+    const scrollto = (el) => {
+        let header = select('#header');
+        let headerOffset = header.offsetHeight;
+        let targetElement = select(el);
+        let targetOffset = targetElement.getBoundingClientRect().top + window.scrollY;
 
+        window.scrollTo({
+            top: targetOffset - headerOffset,
+            behavior: 'smooth'
+        });
+    };
 
     
 
@@ -140,26 +150,27 @@
             // Perform scrolling after animation completion
             target.scrollIntoView({
                 behavior: 'smooth',
-                block: 'start',
-                inline: 'nearest'
+                block: 'start'
             });
         }
     }, true)
 
-  
-   /* Scroll with ofset on page load with hash links in the url
+  /**
+   * Scroll with ofset on page load with hash links in the url
    */
-   window.addEventListener('load', () => {
-    if (window.location.hash) {
-        if (document.querySelector(window.location.hash)) {
-            const offset = parseInt(window.location.hash.getAttribute('data-offset')) || 0;
-            setTimeout(() => {
-                scrollto(window.location.hash, offset);
-            }, 1000); // ZpoÅ¾dÄ›nÃ­ pro posunutÃ­ na mÃ­sto na strÃ¡nce
+    window.addEventListener('load', () => {
+        if (window.location.hash) {
+            if (select(window.location.hash)) {
+                let target = select(window.location.hash);
+                setTimeout(() => {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 1000); // Delay for scrolling to the page
+            }
         }
-    }
-});
-
+    });
 
   /**
    * Preloader
@@ -296,37 +307,37 @@
 
     $(document).ready(function () {
         $('#myForm').submit(function (e) {
-            e.preventDefault(); // Zabrï¿½nï¿½ vï¿½chozï¿½mu chovï¿½nï¿½ formulï¿½ï¿½e (tj. pï¿½esmï¿½rovï¿½nï¿½)
+            e.preventDefault(); // Zabrání výchozímu chování formuláøe (tj. pøesmìrování)
 
-            // Zobrazï¿½ zprï¿½vu "Loading" pï¿½i odesï¿½lï¿½nï¿½ formulï¿½ï¿½e
+            // Zobrazí zprávu "Loading" pøi odesílání formuláøe
             $('.loading').show();
 
             $.ajax({
                 type: 'POST',
-                url: 'email.php', // Adresa, kam se budou posï¿½lat data
-                data: new FormData(this), // Pouï¿½itï¿½ FormData pro zï¿½skï¿½nï¿½ dat formulï¿½ï¿½e vï¿½etnï¿½ souborï¿½
+                url: 'email.php', // Adresa, kam se budou posílat data
+                data: new FormData(this), // Použití FormData pro získání dat formuláøe vèetnì souborù
                 contentType: false,
                 processData: false,
                 success: function (response) {
-                    // Skryje zprï¿½vu "Loading" po ï¿½spï¿½nï¿½m odeslï¿½nï¿½ formulï¿½ï¿½e
+                    // Skryje zprávu "Loading" po úspìšném odeslání formuláøe
                     $('.loading').hide();
 
-                    // Zobrazï¿½ zprï¿½vu o ï¿½spï¿½nï¿½m odeslï¿½nï¿½
+                    // Zobrazí zprávu o úspìšném odeslání
                     $('.sent-message').show();
 
-                    // Skryje pï¿½ï¿½padnou pï¿½edchozï¿½ chybovou zprï¿½vu
+                    // Skryje pøípadnou pøedchozí chybovou zprávu
                     $('.error-message').hide();
 
-                    $('#myForm')[0].reset(); // Vymaï¿½eme formulï¿½ï¿½ po odeslï¿½nï¿½
+                    $('#myForm')[0].reset(); // Vymažeme formuláø po odeslání
                 },
                 error: function (xhr, status, error) {
-                    // Skryje zprï¿½vu "Loading" po chybï¿½ pï¿½i odesï¿½lï¿½nï¿½ formulï¿½ï¿½e
+                    // Skryje zprávu "Loading" po chybì pøi odesílání formuláøe
                     $('.loading').hide();
 
-                    // Zobrazï¿½ chybovou zprï¿½vu
+                    // Zobrazí chybovou zprávu
                     $('.error-message').text('Error: ' + error).show();
 
-                    // Skryje pï¿½ï¿½padnou pï¿½edchozï¿½ ï¿½spï¿½nou zprï¿½vu
+                    // Skryje pøípadnou pøedchozí úspìšnou zprávu
                     $('.sent-message').hide();
                 }
             });
@@ -336,12 +347,12 @@
 
 
     document.addEventListener("DOMContentLoaded", function () {
-        // Funkce pro nastavenï¿½ cookie
+        // Funkce pro nastavení cookie
         function setLanguageCookie(language) {
             document.cookie = "selectedLanguage=" + language + ";path=/";
         }
 
-        // Funkce pro zï¿½skï¿½nï¿½ hodnoty cookie
+        // Funkce pro získání hodnoty cookie
         function getLanguageCookie() {
             var name = "selectedLanguage=";
             var decodedCookie = decodeURIComponent(document.cookie);
@@ -358,33 +369,33 @@
             return null;
         }
 
-        // Funkce pro zmï¿½nu jazyka
+        // Funkce pro zmìnu jazyka
         function changeLanguage(language) {
-            // Skryje vï¿½echny elementy s tï¿½ï¿½dou language-*
+            // Skryje všechny elementy s tøídou language-*
             var allElements = document.querySelectorAll('[class*="language-"]');
             allElements.forEach(function (element) {
                 element.style.display = 'none';
             });
 
-            // Zobrazï¿½ elementy s pï¿½ï¿½sluï¿½nou tï¿½ï¿½dou pro vybranï¿½ jazyk
+            // Zobrazí elementy s pøíslušnou tøídou pro vybraný jazyk
             var selectedElements = document.querySelectorAll('.language-' + language);
             selectedElements.forEach(function (element) {
                 element.style.display = 'inline';
             });
 
-            // Aktualizuje obrï¿½zek vybranï¿½ho jazyka
+            // Aktualizuje obrázek vybraného jazyka
             var selectedImage = document.querySelector(".selected-language");
             var newImageSrc = document.querySelector('.dropdown ul li a[hreflang="' + language + '"] img').getAttribute("src");
             selectedImage.setAttribute("src", newImageSrc);
 
-            // Uloï¿½ï¿½ vybranï¿½ jazyk do souboru cookie
+            // Uloží vybraný jazyk do souboru cookie
             setLanguageCookie(language);
 
-            // Aktualizuje placeholder na zï¿½kladï¿½ vybranï¿½ho jazyka
+            // Aktualizuje placeholder na základì vybraného jazyka
             changePlaceholder(language);
         }
 
-        // Funkce pro nastavenï¿½ jazyka podle nastavenï¿½ prohlï¿½eï¿½e
+        // Funkce pro nastavení jazyka podle nastavení prohlížeèe
         function setLanguageFromBrowser() {
             var browserLanguage = navigator.language || navigator.userLanguage;
 
@@ -397,15 +408,15 @@
             }
         }
 
-        // Funkce pro nastavenï¿½ placeholderï¿½ na zï¿½kladï¿½ vybranï¿½ho jazyka
+        // Funkce pro nastavení placeholderù na základì vybraného jazyka
         function changePlaceholder(language) {
             var nameInput = document.getElementById('name');
             var subjectInput = document.getElementById('subject');
             var messageInput = document.getElementById('message');
             if (language === 'cs') {
-                nameInput.placeholder = 'Jm\u00e9no'; // Jmï¿½no
-                subjectInput.placeholder = 'P\u0159edm\u011bt zpr\u00e1vy'; // Pï¿½edmï¿½t zprï¿½vy
-                messageInput.placeholder = 'Zpr\u00e1va'; // Zprï¿½va
+                nameInput.placeholder = 'Jm\u00e9no'; // Jméno
+                subjectInput.placeholder = 'P\u0159edm\u011bt zpr\u00e1vy'; // Pøedmìt zprávy
+                messageInput.placeholder = 'Zpr\u00e1va'; // Zpráva
             } else if (language === 'en') {
                 nameInput.placeholder = 'Name';
                 subjectInput.placeholder = 'Subject';
@@ -418,69 +429,60 @@
         }
 
 
-        // Naï¿½te uloï¿½enï¿½ jazyk z cookies a zobrazï¿½ ho
+        // Naète uložený jazyk z cookies a zobrazí ho
         var savedLanguage = getLanguageCookie();
         if (savedLanguage) {
-            // Zmï¿½nï¿½ jazyk na uloï¿½enï¿½ jazyk
+            // Zmìní jazyk na uložený jazyk
             changeLanguage(savedLanguage);
         } else {
-            // Nastavï¿½ jazyk podle nastavenï¿½ prohlï¿½eï¿½e, pokud nenï¿½ uloï¿½en ï¿½ï¿½dnï¿½ jazyk
+            // Nastaví jazyk podle nastavení prohlížeèe, pokud není uložen žádný jazyk
             setLanguageFromBrowser();
         }
 
-        // Zï¿½skï¿½nï¿½ vï¿½ech odkazï¿½ pro zmï¿½nu jazyka
+        // Získání všech odkazù pro zmìnu jazyka
         var languageLinks = document.querySelectorAll(".dropdown ul li a");
 
-        // Pï¿½idï¿½nï¿½ posluchaï¿½e udï¿½lostï¿½ kliknutï¿½ na odkazy pro zmï¿½nu jazyka
+        // Pøidání posluchaèe událostí kliknutí na odkazy pro zmìnu jazyka
         languageLinks.forEach(function (link) {
             link.addEventListener("click", function (event) {
-                event.preventDefault(); // Zabraï¿½uje vï¿½chozï¿½mu chovï¿½nï¿½ odkazu
+                event.preventDefault(); // Zabraòuje výchozímu chování odkazu
 
-                // Zï¿½skï¿½nï¿½ jazyka z atributu hreflang odkazu
+                // Získání jazyka z atributu hreflang odkazu
                 var selectedLanguage = link.getAttribute("hreflang");
 
-                // Zmï¿½na jazyka
+                // Zmìna jazyka
                 changeLanguage(selectedLanguage);
             });
         });
-      
-        const header = document.querySelector('#header');
-        const headerOffset = header.offsetHeight;
-        
-        console.log("VÃ½Å¡ka zÃ¡hlavÃ­:", headerOffset);
-        
-        const scrollto = (el) => {
-            const headerOffset = 130; // VÃ½Å¡ka zÃ¡hlavÃ­
-            const targetElement = document.querySelector(el);
-            let targetOffset = targetElement.getBoundingClientRect().top + window.scrollY + 50; // PÅ™idÃ¡nÃ­ offsetu 50 px pro "milling"
-        
-            // PÅ™idÃ¡nÃ­ offsetu pro specifickÃ© cÃ­lovÃ© prvky
-            if (el === "#milling") {
-                targetOffset -= 180; // DalÅ¡Ã­ posun pro "#milling"
-            } else if (el === "#turning") {
-                targetOffset -= 180;
-            }
-            
-        
-            window.scrollTo({
-                top: targetOffset - headerOffset,
-                behavior: 'smooth',
-                block: 'start',
-                inline: 'nearest'
-            });
-        };
-        
-        // VolÃ¡nÃ­ funkce scrollto pro rÅ¯znÃ© odkazy
-        document.querySelectorAll('a.scrollto').forEach(anchor => {
+
+
+        // Funkce pro smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const target = this.getAttribute('href');
-                scrollto(target);
+
+                const target = document.querySelector(this.getAttribute('href'));
+                const offset = 380; // Zde mùžete upravit vzdálenost, o kterou se stránka posune od místa s ID
+
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                    inline: 'nearest'
+                });
+
+                // Posunutí stránky o urèenou vzdálenost
+                const scrollTarget = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({
+                    top: scrollTarget,
+                    behavior: 'smooth'
+                });
             });
         });
-        
-      });
-    
+
+
+    });
+
+
 
   /**
    * Initiate Pure Counter 

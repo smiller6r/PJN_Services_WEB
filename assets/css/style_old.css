@@ -506,8 +506,8 @@ h6 {
 }
 
 #hero .icon-box img {
-    width: 50%; /* ï¿½ï¿½ï¿½ka obrï¿½zku */
-    height: auto; /* Automatickï¿½ vï¿½ï¿½ka, aby se zachoval pomï¿½r stran */
+    width: 50%; /* Šíøka obrázku */
+    height: auto; /* Automatická výška, aby se zachoval pomìr stran */
 }
 
 #hero .icon-box img:hover {
@@ -1575,7 +1575,7 @@ section {
 .flag img {
     width: 36px;
     height: auto;
-    transition: filter 0.3s ease; /* Pï¿½idï¿½me pï¿½echodovï¿½ efekt pro plynulou zmï¿½nu barvy */
+    transition: filter 0.3s ease; /* Pøidáme pøechodový efekt pro plynulou zmìnu barvy */
 }
 
     .flag img:hover {

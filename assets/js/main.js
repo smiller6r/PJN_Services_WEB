@@ -461,6 +461,12 @@
                 targetOffset -= 180;
             } else if (el === "#lasercutting") {
                 targetOffset -= 180;
+            } else if (el === "#bending") {
+                targetOffset -= 180;
+            } else if (el === "#welding") {
+                targetOffset -= 180;
+            } else if (el === "#surface") {
+                targetOffset -= 180;
             }
             
         

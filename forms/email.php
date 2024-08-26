@@ -15,25 +15,25 @@ if (isset($_POST['send'])) {
 
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host = 'smtp.seznam.cz';
+    $mail->Host = 'smtp.cesky-hosting.cz';
     $mail->SMTPAuth = true;
-    $mail->Username = 'pjel@seznam.cz';
-    $mail->Password = 'smiller3287*';
+    $mail->Username = 'info@pjnservices.eu';
+    $mail->Password = 'YamahaR6*32877823';
     $mail->Port = 465;
     $mail->SMTPSecure = 'ssl';
     $mail->isHTML(true);
-    $mail->setFrom($email, $name); // Nastaví odesílatele podle údajù z formuláøe
+    $mail->setFrom($email, $name); // NastavÃ­ odesÃ­latele podle ÃºdajÅ¯ z formulÃ¡Å™e
 
-    // Nastavení adresy pøíjemce, pøedmìtu a obsahu zprávy
-    $mail->addAddress('pjel@seznam.cz');
+    // NastavenÃ­ adresy pÅ™Ã­jemce, pÅ™edmÄ›tu a obsahu zprÃ¡vy
+    $mail->addAddress('info@pjnservices.eu');
     $mail->Subject = $subject;
     $mail->Body = $message;
 
-    // Pokusí se odeslat e-mail
+    // PokusÃ­ se odeslat e-mail
     if ($mail->send()) {
-        echo 'E-mail byl úspìšnì odeslán.';
+        echo 'E-mail byl ÃºspÃ¬Å¡nÃ¬ odeslÃ¡n.';
     } else {
-        echo 'Došlo k chybì pøi odesílání e-mailu: ' . $mail->ErrorInfo;
+        echo 'DoÅ¡lo k chybÃ¬ pÃ¸i odesÃ­lÃ¡nÃ­ e-mailu: ' . $mail->ErrorInfo;
     }
 }
 

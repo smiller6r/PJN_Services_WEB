@@ -13,30 +13,30 @@ try {
     $subject = $_POST['subject'];
     $message = $_POST['message'];
 
-    // Pøevedení jména a pøedmìtu na UTF-8
+    // PÃ¸evedenÃ­ jmÃ©na a pÃ¸edmÃ¬tu na UTF-8
     $name = mb_convert_encoding($name, 'UTF-8');
     $subject = mb_convert_encoding($subject, 'UTF-8');
 
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host = 'smtp.seznam.cz';
+    $mail->Host = 'smtp.cesky-hosting.cz';
     $mail->SMTPAuth = true;
-    $mail->Username = 'pjel@seznam.cz';
-    $mail->Password = 'smiller3287*';
+    $mail->Username = 'info@pjnservices.eu';
+    $mail->Password = 'YamahaR6*32877823';
     $mail->Port = 465;
     $mail->SMTPSecure = 'ssl';
     $mail->isHTML(true);
-    $mail->CharSet = 'UTF-8'; // Nastavení kódování UTF-8
-    $mail->setFrom('pjel@seznam.cz', $name); // Nastaví odesílatele podle údajù z formuláøe
-    // Nastavení adresy pøíjemce, pøedmìtu a obsahu zprávy
-    $mail->addAddress('pjel@seznam.cz');
+    $mail->CharSet = 'UTF-8'; // NastavenÃ­ kÃ³dovÃ¡nÃ­ UTF-8
+    $mail->setFrom($email, $name); // NastavÃ­ odesÃ­latele podle ÃºdajÅ¯ z formulÃ¡Å™e
+    // NastavenÃ­ adresy pÅ™Ã­jemce, pÅ™edmÄ›tu a obsahu zprÃ¡vy
+    $mail->addAddress('info@pjnservices.eu');
     $mail->addCC($email);
     $mail->Subject = $subject;
     $mail->Body = $message;
 
-    // Pøidání pøíloh
+    // PÃ¸idÃ¡nÃ­ pÃ¸Ã­loh
     if (!empty($_FILES['attachment']['name'][0])) {
-        // Cyklus pro pøidání všech pøíloh
+        // Cyklus pro pÃ¸idÃ¡nÃ­ vÅ¡ech pÃ¸Ã­loh
         for ($i = 0; $i < count($_FILES['attachment']['name']); $i++) {
             $attachment = $_FILES['attachment']['tmp_name'][$i];
             $attachment_name = $_FILES['attachment']['name'][$i];
@@ -44,7 +44,7 @@ try {
         }
     }
 
-    // Pokusí se odeslat e-mail
+    // PokusÃ­ se odeslat e-mail
     $mail->send();
     //echo 'Message has been sent';
 } catch (Exception $e) {

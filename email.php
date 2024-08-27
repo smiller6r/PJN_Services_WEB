@@ -19,15 +19,15 @@ try {
 
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host = 'smtp.cesky-hosting.cz';
+    $mail->Host = 'websmtp.cesky-hosting.cz';
     $mail->SMTPAuth = true;
-    $mail->Username = 'info@pjnservices.eu';
-    $mail->Password = 'YamahaR6*32877823';
-    $mail->Port = 465;
-    $mail->SMTPSecure = 'ssl';
+    $mail->Username = 'pjnservices.eu';
+    $mail->Password = 'smiller3287*';
+    $mail->Port = 25;
+    $mail->SMTPSecure = 'tls';
     $mail->isHTML(true);
     $mail->CharSet = 'UTF-8'; // Nastavení kódování UTF-8
-    $mail->setFrom($email, $name); // Nastaví odesílatele podle údajů z formuláře
+    $mail->setFrom('info@pjnservices.eu', $name); // Nastaví odesílatele podle údajů z formuláře
     // Nastavení adresy příjemce, předmětu a obsahu zprávy
     $mail->addAddress('info@pjnservices.eu');
     $mail->addCC($email);
